@@ -514,7 +514,7 @@ const RIGHT_TREATMENTS: TreatmentDetail[] = [
       "dermal elasticity.",
     ],
     image: "/images/thumb-rf.jpg",
-    detailImage: "/images/concern-6.jpg",
+    detailImage: "/images/detail-rf.jpg",
     alt: "RF Skin Tightening lower face and jawline",
     headline:
       "Non-surgical radiofrequency lifting for jawline, cheeks, and neck.",
@@ -578,7 +578,7 @@ const RIGHT_TREATMENTS: TreatmentDetail[] = [
       "glass-like clarity.",
     ],
     image: "/images/thumb-peels.jpg",
-    detailImage: "/images/concern-4.jpg",
+    detailImage: "/images/detail-peels.jpg",
     alt: "Radiant skin after a chemical peel",
     headline:
       "Custom-blended clinical acids to resurface, clarify, and brighten.",
@@ -642,7 +642,7 @@ const RIGHT_TREATMENTS: TreatmentDetail[] = [
       "natural barrier repair.",
     ],
     image: "/images/thumb-led.jpg",
-    detailImage: "/images/concern-5.jpg",
+    detailImage: "/images/detail-led.jpg",
     alt: "Relaxing red LED light therapy treatment",
     headline:
       "Medical-grade wavelengths to calm inflammation and supercharge repair.",
@@ -839,70 +839,67 @@ function BenefitIcon({ type }: { type: ClinicalBenefit["icon"] }) {
     case "sun":
       return (
         <svg
-          viewBox="0 0 20 20"
+          viewBox="0 0 24 24"
           fill="none"
-          className="w-4 h-4"
+          className="w-5 h-5"
           stroke="currentColor"
           strokeWidth="1.2"
         >
-          <circle cx="10" cy="10" r="3.2" />
-          <path
-            strokeLinecap="round"
-            d="M10 3.2V4.8M10 15.2V16.8M3.2 10H4.8M15.2 10H16.8M5.2 5.2L6.3 6.3M13.7 13.7L14.8 14.8M14.8 5.2L13.7 6.3M6.3 13.7L5.2 14.8"
-          />
+          <circle cx="12" cy="12" r="3.6" />
+          <line x1="12" y1="4.2" x2="12" y2="6.2" strokeLinecap="round" />
+          <line x1="12" y1="17.8" x2="12" y2="19.8" strokeLinecap="round" />
+          <line x1="4.2" y1="12" x2="6.2" y2="12" strokeLinecap="round" />
+          <line x1="17.8" y1="12" x2="19.8" y2="12" strokeLinecap="round" />
+          <line x1="6.5" y1="6.5" x2="7.9" y2="7.9" strokeLinecap="round" />
+          <line x1="16.1" y1="16.1" x2="17.5" y2="17.5" strokeLinecap="round" />
+          <line x1="17.5" y1="6.5" x2="16.1" y2="7.9" strokeLinecap="round" />
+          <line x1="7.9" y1="16.1" x2="6.5" y2="17.5" strokeLinecap="round" />
         </svg>
       );
     case "vascular":
       return (
         <svg
-          viewBox="0 0 20 20"
+          viewBox="0 0 24 24"
           fill="none"
-          className="w-4 h-4"
+          className="w-5 h-5"
           stroke="currentColor"
           strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M7 4.5C7 8 10 8.5 10 12C10 13.8 8.8 15.5 8 16M13 4.5C13 7.5 10.2 9.5 10.2 12.5C10.2 14.2 11.5 15.2 12.5 16M5.5 8.5C7.2 8.5 8.5 9.8 8.5 11.5"
-          />
+          <path d="M7.5 6.5V17.5" />
+          <path d="M16.5 6.5V17.5" />
+          <path d="M7.5 7L12 12.5L16.5 7" />
+          <path d="M7.5 17L12 11.5L16.5 17" />
+          <path d="M12 6.5V17.5" />
         </svg>
       );
     case "sparkle":
       return (
         <svg
-          viewBox="0 0 20 20"
+          viewBox="0 0 24 24"
           fill="none"
-          className="w-4 h-4"
+          className="w-5 h-5"
           stroke="currentColor"
           strokeWidth="1.2"
+          strokeLinejoin="round"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M11.5 4.5L12.4 7.6L15.5 8.5L12.4 9.4L11.5 12.5L10.6 9.4L7.5 8.5L10.6 7.6L11.5 4.5Z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6.5 11.5L7 13.2L8.7 13.7L7 14.2L6.5 15.9L6 14.2L4.3 13.7L6 13.2L6.5 11.5Z"
-          />
+          <path d="M14.5 4.5 Q14.5 8 18 8 Q14.5 8 14.5 11.5 Q14.5 8 11 8 Q14.5 8 14.5 4.5Z" />
+          <path d="M8 11.5 Q8 14.5 11 14.5 Q8 14.5 8 17.5 Q8 14.5 5 14.5 Q8 14.5 8 11.5Z" />
         </svg>
       );
     case "shield":
       return (
         <svg
-          viewBox="0 0 20 20"
+          viewBox="0 0 24 24"
           fill="none"
-          className="w-4 h-4"
+          className="w-5 h-5"
           stroke="currentColor"
           strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M10 4.2L14.8 6V9.8C14.8 12.9 12.7 15.2 10 16.2C7.3 15.2 5.2 12.9 5.2 9.8V6L10 4.2Z"
-          />
+          <path d="M6.5 6.5H17.5V11.2C17.5 15.2 14.5 17.6 12 18.5C9.5 17.6 6.5 15.2 6.5 11.2V6.5Z" />
         </svg>
       );
   }
@@ -966,6 +963,28 @@ export default function Home() {
   const [activeReviewIndex, setActiveReviewIndex] = useState<number>(1);
   const activeReview =
     CLIENT_REVIEWS[activeReviewIndex] ?? CLIENT_REVIEWS[1];
+  const reviewTouchStartXRef = useRef<number | null>(null);
+
+  const handleReviewTouchStart = (e: React.TouchEvent) => {
+    reviewTouchStartXRef.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const handleReviewTouchEnd = (e: React.TouchEvent) => {
+    if (reviewTouchStartXRef.current === null) return;
+    const touchEndX = e.changedTouches[0]?.clientX ?? null;
+    if (touchEndX === null) return;
+    const deltaX = touchEndX - reviewTouchStartXRef.current;
+    if (Math.abs(deltaX) > 40) {
+      if (deltaX < 0) {
+        setActiveReviewIndex((prev) => (prev + 1) % CLIENT_REVIEWS.length);
+      } else {
+        setActiveReviewIndex(
+          (prev) => (prev - 1 + CLIENT_REVIEWS.length) % CLIENT_REVIEWS.length
+        );
+      }
+    }
+    reviewTouchStartXRef.current = null;
+  };
 
   const activeConcern =
     SKIN_CONCERN_CARDS[selectedConcernIndex] ?? SKIN_CONCERN_CARDS[0];
@@ -1188,13 +1207,18 @@ export default function Home() {
             isScrolled || mobileMenuOpen ? "" : "border-b border-[#DFDBD2]"
           }`}
         >
-          {/* Mobile Left: Brand Title */}
+          {/* Mobile Left: Official Brand Logo */}
           <a
             href="#home"
             onClick={() => setMobileMenuOpen(false)}
-            className="font-editorial md:hidden uppercase text-[#1C1917] hover:text-[#FC5E2F] transition-colors text-xs sm:text-sm tracking-[0.16em] font-medium whitespace-nowrap"
+            className="md:hidden flex items-center py-1 group"
+            aria-label="Soul Skin & Laser Home"
           >
-            SOUL SKIN &amp; LASER
+            <img
+              src="/images/logo-dark.png"
+              alt="Soul Skin & Laser"
+              className="h-8 sm:h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
+            />
           </a>
 
           {/* Desktop Left: Navigation Links */}
@@ -1256,12 +1280,17 @@ export default function Home() {
             </a>
           </nav>
 
-          {/* Desktop Center: Brand Title */}
+          {/* Desktop Center: Official Brand Logo */}
           <a
             href="#home"
-            className="font-editorial hidden md:block md:absolute md:left-1/2 md:-translate-x-1/2 uppercase text-[#1C1917] hover:text-[#FC5E2F] transition-colors text-sm sm:text-[calc(10.5*var(--u))] tracking-[0.21em] font-normal whitespace-nowrap"
+            className="hidden md:flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2 h-full py-1.5 group"
+            aria-label="Soul Skin & Laser Home"
           >
-            SOUL SKIN &amp; LASER
+            <img
+              src="/images/logo-dark.png"
+              alt="Soul Skin & Laser"
+              className="h-10 sm:h-[calc(22*var(--u))] max-h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
+            />
           </a>
 
           {/* Desktop Right: Header Pill CTA */}
@@ -1456,7 +1485,7 @@ export default function Home() {
           </p>
 
           {/* Main Display Heading */}
-          <h1 className="hero-animate-heading font-editorial text-white font-light text-4xl sm:text-[calc(38*var(--u))] leading-[1.03] sm:leading-[calc(39*var(--u))] tracking-[-0.015em] mt-3.5 sm:mt-[calc(12*var(--u))]">
+          <h1 className="hero-animate-heading font-editorial text-white font-light text-3xl xs:text-4xl sm:text-[calc(38*var(--u))] leading-[1.05] sm:leading-[calc(39*var(--u))] tracking-[-0.015em] mt-3 sm:mt-[calc(12*var(--u))]">
             <span className="block">Your skin,</span>
             <span className="block">understood &mdash;</span>
             <span className="block italic font-normal">then transformed</span>
@@ -1649,7 +1678,7 @@ export default function Home() {
           </button>
 
           {/* Right List of 4 Treatments */}
-          <div className="flex flex-col justify-between w-full lg:w-[calc(276*var(--u))] gap-3 lg:gap-[calc(2.5*var(--u))] mt-2 lg:mt-0">
+          <div className="flex flex-col justify-between w-full lg:w-[calc(276*var(--u))] gap-2 sm:gap-2.5 lg:gap-[calc(2*var(--u))] mt-2 lg:mt-0">
             {RIGHT_TREATMENTS.map((item, idx) => (
               <button
                 key={item.id}
@@ -1662,7 +1691,7 @@ export default function Home() {
                     "--reveal-delay": `${idx * 85}ms`,
                   } as React.CSSProperties
                 }
-                className="group flex items-center text-left w-full bg-[#E7E1D7] hover:bg-[#DFD8CC] transition-colors p-2.5 sm:p-3 lg:p-[calc(4.5*var(--u))] min-h-[84px] sm:min-h-[96px] lg:h-[calc(76.5*var(--u))] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FC5E2F]"
+                className="group flex items-center text-left w-full bg-[#E7E1D7] hover:bg-[#DFD8CC] transition-colors p-2 sm:p-2.5 lg:p-[calc(4*var(--u))] min-h-[76px] sm:min-h-[84px] lg:h-[calc(75*var(--u))] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FC5E2F]"
               >
                 {/* Thumbnail */}
                 <div className="img-shine relative overflow-hidden shrink-0 w-24 sm:w-32 lg:w-[calc(115*var(--u))] h-16 sm:h-20 lg:h-[calc(67.5*var(--u))] bg-[#C8A892]">
@@ -1762,7 +1791,7 @@ export default function Home() {
                 updateSliderFromClientX(e.touches[0].clientX);
               }
             }}
-            className="relative w-full max-w-[460px] lg:max-w-none lg:w-[calc(298*var(--u))] aspect-[361/287] rounded-[8px] overflow-hidden select-none cursor-ew-resize bg-[#B88E72] shadow-xs shrink-0"
+            className="relative w-full max-w-[460px] lg:max-w-none lg:w-[calc(298*var(--u))] aspect-[361/287] rounded-[8px] overflow-hidden select-none cursor-ew-resize bg-[#B88E72] shadow-xs shrink-0 touch-none"
           >
             {/* Left Side: BEFORE Image (0% -> sliderPosition%) */}
             <div
@@ -2006,6 +2035,8 @@ export default function Home() {
           {/* LEFT COLUMN: Quote Block + Reviewer Row + Divider + Clinic Summary */}
           <div
             data-reveal="left"
+            onTouchStart={handleReviewTouchStart}
+            onTouchEnd={handleReviewTouchEnd}
             className="flex flex-col justify-between pt-1 sm:pt-[calc(4*var(--u))] pb-1 sm:pb-[calc(4*var(--u))]"
           >
             {/* Top Quote & Reviewer Group */}
@@ -2342,14 +2373,10 @@ export default function Home() {
             <span className="h-[1px] w-7 sm:w-[calc(22*var(--u))] bg-gradient-to-l from-transparent to-[#FC5E2F]" />
           </div>
 
-          {/* Two-Line Editorial Serif Display Heading */}
-          <h2 className="font-editorial text-center select-none drop-shadow-[0_10px_28px_rgba(0,0,0,0.45)] flex flex-col items-center">
-            <span className="block italic font-bold text-[#FC5E2F] text-5xl sm:text-[calc(76*var(--u))] leading-[0.88] tracking-[-0.03em]">
-              Soul Skin
-            </span>
-            <span className="block font-normal text-[#F1EEE9] text-4xl sm:text-[calc(58*var(--u))] leading-[0.95] tracking-[-0.02em] -mt-1 sm:-mt-[calc(4*var(--u))]">
-              Membership.
-            </span>
+          {/* Editorial Serif Display Heading matching remaining section headings */}
+          <h2 className="font-editorial text-center select-none drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] text-3xl sm:text-[calc(25*var(--u))] leading-[1.12] sm:leading-[calc(27.8*var(--u))] tracking-[-0.015em]">
+            <span className="italic font-normal text-[#FC5E2F]">Soul Skin </span>
+            <span className="font-normal text-[#F1EEE9]">Membership.</span>
           </h2>
 
           <div className="mt-4 sm:mt-[calc(11*var(--u))] w-full max-w-lg sm:max-w-[calc(330*var(--u))] mx-auto flex flex-col items-center">
@@ -2566,9 +2593,14 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0 pb-5 lg:pb-[calc(15*var(--u))] border-b border-white/15">
               <a
                 href="#home"
-                className="font-editorial uppercase text-white text-sm sm:text-[calc(9*var(--u))] tracking-[0.21em] font-normal whitespace-nowrap"
+                className="flex items-center group"
+                aria-label="Soul Skin & Laser Home"
               >
-                SOUL SKIN &amp; LASER
+                <img
+                  src="/images/logo-white.png"
+                  alt="Soul Skin & Laser"
+                  className="h-9 sm:h-[calc(19*var(--u))] w-auto object-contain transition-opacity group-hover:opacity-85"
+                />
               </a>
 
               <nav
@@ -2732,176 +2764,239 @@ export default function Home() {
 
           {/* STEP 1 VIEW: THE SPLIT TREATMENTS SHOWCASE */}
           {!activeTreatment ? (
-            <div className="relative z-10 w-full max-w-[1040px] max-h-[92vh] overflow-y-auto bg-[#F1EEE9] text-[#1C1917] shadow-2xl border border-[#DFDBD2] p-4 sm:p-7 md:p-8">
-              {/* Top Header Bar */}
-              <div className="flex items-center justify-between gap-4 pb-4 mb-5 border-b border-[#E2DED5]">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center justify-center rounded-full bg-[#1C1917] text-white text-[10px] font-medium w-5 h-5">
-                    {activeConcern.number}
-                  </span>
-                  <span className="font-editorial italic text-sm sm:text-base text-[#1C1917]">
-                    {activeConcern.title}
-                  </span>
-                  <span className="hidden sm:inline text-[#C5BFB5] mx-1">
-                    |
-                  </span>
-                  <span className="hidden sm:inline text-[11px] text-[#7A736B]">
-                    Select a treatment below to explore full clinical details
-                  </span>
+            <div className="relative z-10 w-full max-w-[1060px] max-h-[92vh] overflow-y-auto bg-[#F1EEE9] text-[#1C1917] shadow-2xl border border-[#DFDBD2] p-4 sm:p-6 md:p-8">
+              {/* Top Header Bar: Concern Title, Target Modality & Close Button */}
+              <div className="flex flex-col gap-3 pb-4 mb-5 border-b border-[#E2DED5]">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center justify-center rounded-full bg-[#FC5E2F] text-white text-[11px] font-semibold w-6 h-6 shadow-xs">
+                      {activeConcern.number}
+                    </span>
+                    <h3 className="font-editorial text-lg sm:text-2xl text-[#1C1917] font-normal">
+                      {activeConcern.title}
+                    </h3>
+                    <span className="hidden sm:inline text-[#C5BFB5] mx-1">|</span>
+                    <span className="text-xs text-[#7A736B]">
+                      Primary Target Modality:{" "}
+                      <strong className="text-[#1C1917] font-semibold">
+                        {activeConcern.topLabel}
+                      </strong>
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={closeModal}
+                    aria-label="Close modal"
+                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full hover:bg-[#E4DFD5] text-[#4A453E] hover:text-[#1C1917] transition-colors cursor-pointer"
+                  >
+                    <CloseIcon className="h-4 w-4" />
+                  </button>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  aria-label="Close modal"
-                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-[#4A453E] hover:text-[#1C1917] transition-colors cursor-pointer"
-                >
-                  <CloseIcon className="h-4 w-4" />
-                </button>
-              </div>
-
-              <div className="flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-5">
-                {/* Left Featured Signature Treatment Card (Skin Needling) */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedTreatmentId(SIGNATURE_TREATMENT.id)}
-                  className="group relative text-left overflow-hidden bg-[#5C4B3B] w-full md:w-[56.5%] min-h-[320px] md:min-h-[450px] shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FC5E2F]"
-                >
-                  <img
-                    src={SIGNATURE_TREATMENT.image}
-                    alt={SIGNATURE_TREATMENT.alt}
-                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-
-                  {/* Bottom-left Overlay Text */}
-                  <div className="absolute left-6 bottom-7 sm:left-8 sm:bottom-9">
-                    <p className="uppercase text-white/85 font-medium text-[10px] sm:text-[11px] tracking-[0.15em] leading-none">
-                      {SIGNATURE_TREATMENT.eyebrow}
-                    </p>
-                    <h3 className="font-editorial text-white font-normal text-3xl sm:text-[38px] leading-[1.08] mt-2.5 tracking-[-0.01em]">
-                      {SIGNATURE_TREATMENT.title}
-                    </h3>
-                    <p className="text-white/85 font-normal text-xs sm:text-[13.5px] leading-[1.65] mt-2.5">
-                      {SIGNATURE_TREATMENT.shortTagline[0]}
-                      <br />
-                      {SIGNATURE_TREATMENT.shortTagline[1]}
-                    </p>
-                  </div>
-                </button>
-
-                {/* Right Stack of 4 Horizontal Treatment Cards */}
-                <div className="flex flex-col justify-between w-full md:flex-1 gap-2">
-                  {RIGHT_TREATMENTS.map((item) => {
-                    const isRecommendedForConcern =
-                      activeConcern.featuredTreatmentId === item.id;
+                {/* Concern Switcher Tabs */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
+                  {SKIN_CONCERN_CARDS.map((c, idx) => {
+                    const isSelected = selectedConcernIndex === idx;
                     return (
                       <button
-                        key={item.id}
+                        key={c.id}
                         type="button"
-                        onClick={() => setSelectedTreatmentId(item.id)}
-                        className="group flex items-center text-left w-full bg-[#EBE8E1] hover:bg-[#E4E0D6] transition-colors p-2.5 sm:p-3 min-h-[106px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FC5E2F]"
+                        onClick={() => {
+                          setSelectedConcernIndex(idx);
+                          setSelectedTreatmentId(null);
+                        }}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all cursor-pointer ${
+                          isSelected
+                            ? "bg-[#1C1917] text-white shadow-xs"
+                            : "bg-[#E5E1D7] text-[#5E5850] hover:bg-[#DDD8CD] hover:text-[#1C1917]"
+                        }`}
                       >
-                        {/* Thumbnail */}
-                        <div className="relative overflow-hidden shrink-0 w-32 h-20 sm:w-[168px] sm:h-[96px] bg-[#C8A892]">
-                          <img
-                            src={item.image}
-                            alt={item.alt}
-                            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
-
-                        {/* Text Content */}
-                        <div className="flex flex-col justify-center pl-4 sm:pl-5 pr-2">
-                          <h4 className="font-editorial text-[#1E1B18] font-normal text-lg sm:text-[19px] leading-[1.2] tracking-[-0.01em]">
-                            {item.title}
-                          </h4>
-
-                          <p className="text-[#7E7870] font-normal text-xs sm:text-[12px] leading-tight mt-1.5 tracking-[0.01em]">
-                            {item.tags.map((tag, idx) => (
-                              <React.Fragment key={tag}>
-                                {idx > 0 && (
-                                  <span className="mx-1.5 opacity-75">
-                                    &middot;
-                                  </span>
-                                )}
-                                <span className="capitalize">
-                                  {tag.toLowerCase()}
-                                </span>
-                              </React.Fragment>
-                            ))}
-                          </p>
-
-                          <span
-                            className={`inline-flex items-center font-medium text-xs sm:text-[12px] mt-3 gap-2 transition-colors ${
-                              isRecommendedForConcern
-                                ? "text-[#FC5E2F]"
-                                : "text-[#2B2724] group-hover:text-[#FC5E2F]"
-                            }`}
-                          >
-                            <span>Learn More</span>
-                            <ArrowRight className="w-3 h-2.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                          </span>
-                        </div>
+                        <span className="opacity-70 text-[10px]">{c.number}</span>
+                        <span>{c.title}</span>
                       </button>
                     );
                   })}
                 </div>
               </div>
+
+              {/* Step 1 Split Layout */}
+              <div className="flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-5">
+                {/* Left Featured Treatment Card: DYNAMICALLY matching activeConcern.featuredTreatmentId! */}
+                {(() => {
+                  const featuredTreatment =
+                    ALL_TREATMENTS.find(
+                      (t) => t.id === activeConcern.featuredTreatmentId
+                    ) ?? SIGNATURE_TREATMENT;
+                  return (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedTreatmentId(featuredTreatment.id)}
+                      className="group relative text-left overflow-hidden bg-[#3B281B] w-full md:w-[56.5%] min-h-[300px] md:min-h-[380px] shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FC5E2F] border border-[#DDD8CD]"
+                    >
+                      <img
+                        src={featuredTreatment.detailImage || featuredTreatment.image}
+                        alt={featuredTreatment.alt}
+                        className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+
+                      {/* Top-Left Tag: PRIMARY RECOMMENDED PROTOCOL */}
+                      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FC5E2F] text-white text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider shadow-sm">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                          Recommended for {activeConcern.title}
+                        </span>
+                      </div>
+
+                      {/* Bottom-left Overlay Text */}
+                      <div className="absolute left-5 bottom-6 sm:left-7 sm:bottom-8 right-5">
+                        <p className="uppercase text-white/80 font-medium text-[10px] sm:text-[11px] tracking-[0.16em] leading-none">
+                          {featuredTreatment.eyebrow}
+                        </p>
+                        <h3 className="font-editorial text-white font-normal text-3xl sm:text-[38px] leading-[1.06] mt-2.5 tracking-[-0.015em]">
+                          {featuredTreatment.title}
+                        </h3>
+                        <p className="text-white/85 font-normal text-xs sm:text-[13px] leading-[1.6] mt-2.5 max-w-md">
+                          {featuredTreatment.shortTagline[0]}{" "}
+                          {featuredTreatment.shortTagline[1]}
+                        </p>
+
+                        <div className="flex flex-wrap items-center gap-2 mt-4">
+                          {featuredTreatment.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="inline-flex items-center rounded-full border border-white/40 bg-black/30 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/95"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="mt-5 pt-3 border-t border-white/20 flex items-center justify-between">
+                          <span className="text-white/90 text-xs font-editorial">
+                            {featuredTreatment.specs.price} &middot;{" "}
+                            {featuredTreatment.specs.duration}
+                          </span>
+                          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white group-hover:text-[#FC5E2F] transition-colors">
+                            <span>View Full Clinical Protocol</span>
+                            <ArrowRight className="w-3 h-2.5 transition-transform duration-300 group-hover:translate-x-1" />
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                  );
+                })()}
+
+                {/* Right Stack of Complementary/Alternative Treatment Cards */}
+                {(() => {
+                  const featuredTreatment =
+                    ALL_TREATMENTS.find(
+                      (t) => t.id === activeConcern.featuredTreatmentId
+                    ) ?? SIGNATURE_TREATMENT;
+                  const otherTreatments = ALL_TREATMENTS.filter(
+                    (t) => t.id !== featuredTreatment.id
+                  );
+                  return (
+                    <div className="flex flex-col justify-start w-full md:flex-1 gap-1.5 sm:gap-2">
+                      <div className="pb-1 border-b border-[#E2DED5]">
+                        <p className="text-[10px] uppercase tracking-[0.14em] text-[#7A736B] font-medium">
+                          Alternative &amp; Complementary Modalities
+                        </p>
+                      </div>
+
+                      {otherTreatments.map((item) => (
+                        <button
+                          key={item.id}
+                          type="button"
+                          onClick={() => setSelectedTreatmentId(item.id)}
+                          className="group flex items-center text-left w-full bg-[#EBE8E1] hover:bg-[#E4DFD4] transition-colors p-2 sm:p-2.5 min-h-[76px] sm:min-h-[82px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FC5E2F] border border-[#DDD8CD]"
+                        >
+                          {/* Thumbnail */}
+                          <div className="relative overflow-hidden shrink-0 w-24 h-16 sm:w-28 sm:h-[72px] bg-[#C8A892]">
+                            <img
+                              src={item.image}
+                              alt={item.alt}
+                              className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                            />
+                          </div>
+
+                          {/* Text Content */}
+                          <div className="flex flex-col justify-center pl-3 sm:pl-3.5 pr-2 flex-1 min-w-0">
+                            <h4 className="font-editorial text-[#1E1B18] font-normal text-sm sm:text-[16px] leading-[1.2] tracking-[-0.01em] group-hover:text-[#FC5E2F] transition-colors">
+                              {item.title}
+                            </h4>
+
+                            <p className="text-[#7E7870] font-normal text-[10.5px] sm:text-[11px] leading-tight mt-0.5 tracking-[0.01em] truncate">
+                              {item.tags.join(" · ")}
+                            </p>
+
+                            <div className="flex items-center justify-between mt-1.5">
+                              <span className="text-[11px] text-[#6E6860] font-editorial">
+                                {item.specs.price}
+                              </span>
+                              <span className="inline-flex items-center font-medium text-[11px] sm:text-xs text-[#2B2724] group-hover:text-[#FC5E2F] gap-1 transition-colors">
+                                <span>Learn More</span>
+                                <ArrowRight className="w-2.5 h-2 transition-transform duration-300 group-hover:translate-x-0.5" />
+                              </span>
+                            </div>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  );
+                })()}
+              </div>
             </div>
           ) : (
-            /* STEP 2 VIEW: FULL-BLEED SPLIT TREATMENT DETAILS MODAL (MATCHING ATTACHED UI) */
-            <div className="relative z-10 flex flex-col md:flex-row w-full max-w-[1060px] max-h-[93vh] overflow-y-auto md:overflow-hidden bg-[#EFEBE2] text-[#1C1917] shadow-2xl">
+            /* STEP 2 VIEW: FULL-BLEED SPLIT TREATMENT DETAILS MODAL */
+            <div className="relative z-10 flex flex-col md:flex-row w-full max-w-[1080px] max-h-[92vh] overflow-y-auto md:overflow-hidden bg-[#F2EFE9] text-[#1C1917] shadow-2xl border border-[#D8D2C7]">
               {/* Left 40% Full-Bleed Portrait Image Panel */}
-              <div className="relative w-full md:w-[40%] min-h-[360px] md:min-h-[680px] shrink-0 overflow-hidden bg-[#3B281B]">
+              <div className="relative w-full md:w-[40%] min-h-[250px] sm:min-h-[320px] md:min-h-[600px] lg:min-h-[660px] shrink-0 overflow-hidden bg-[#2C2117]">
                 <img
-                  src={activeTreatment.detailImage}
+                  src={activeTreatment.detailImage || activeTreatment.image}
                   alt={activeTreatment.alt}
                   className="absolute inset-0 h-full w-full object-cover object-center"
                 />
                 {/* Subtle Top & Bottom Vignette for Legibility */}
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/45 to-transparent" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-24 sm:h-28 bg-gradient-to-b from-black/60 via-black/25 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
-                {/* Top-Left: "<- Back to All Treatments" */}
+                {/* Top-Left: "<- Back to Treatments" Button */}
                 <button
                   type="button"
                   onClick={() => setSelectedTreatmentId(null)}
-                  className="absolute top-6 left-6 sm:top-7 sm:left-7 z-10 inline-flex items-center gap-2.5 text-white/90 hover:text-white transition-colors cursor-pointer"
+                  className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 inline-flex items-center gap-2 rounded-full bg-black/45 backdrop-blur-xs px-3 py-1.5 sm:px-3.5 text-white/95 hover:text-white hover:bg-black/65 transition-all cursor-pointer border border-white/20 text-xs sm:text-sm"
                 >
                   <ArrowLeft className="w-3.5 h-2.5" />
-                  <span className="font-editorial text-sm sm:text-[15px] tracking-[-0.01em]">
-                    Back to All Treatments
+                  <span className="font-editorial tracking-[-0.01em]">
+                    Back to Treatments
                   </span>
                 </button>
 
                 {/* Bottom-Left: Eyebrow, Large Serif Title, Tagline & Pill Badges */}
-                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 z-10">
-                  <p className="uppercase text-white/80 font-medium text-[9.5px] sm:text-[10px] tracking-[0.16em]">
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 md:p-8 z-10">
+                  <p className="uppercase text-white/80 font-medium text-[9px] sm:text-[10px] tracking-[0.16em]">
                     {activeTreatment.eyebrow}
                   </p>
 
-                  <h3 className="font-editorial text-white font-normal text-4xl sm:text-[44px] leading-[1.05] tracking-[-0.015em] mt-2.5">
-                    <span className="block">
-                      {activeTreatment.titleLines[0]}
-                    </span>
-                    <span className="block">
-                      {activeTreatment.titleLines[1]}
-                    </span>
+                  <h3 className="font-editorial text-white font-normal text-2xl sm:text-3xl md:text-[40px] leading-[1.08] tracking-[-0.015em] mt-1.5 sm:mt-2.5">
+                    <span className="block">{activeTreatment.titleLines[0]}</span>
+                    <span className="block">{activeTreatment.titleLines[1]}</span>
                   </h3>
 
-                  <p className="text-white/85 text-xs sm:text-[13px] leading-[1.55] mt-3.5 max-w-[310px]">
+                  <p className="text-white/85 text-[11px] sm:text-[13px] leading-[1.5] mt-2 sm:mt-3 max-w-[320px]">
                     {activeTreatment.shortTagline[0]}
                     <br />
                     {activeTreatment.shortTagline[1]}
                   </p>
 
                   {/* Outline Pill Tags */}
-                  <div className="flex flex-wrap items-center gap-2 mt-5">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3 sm:mt-4">
                     {activeTreatment.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center justify-center rounded-full border border-white/35 bg-black/20 px-3.5 py-1.5 text-[9.5px] uppercase tracking-[0.14em] text-white/90 font-medium"
+                        className="inline-flex items-center justify-center rounded-full border border-white/35 bg-black/30 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[8.5px] sm:text-[9px] uppercase tracking-[0.14em] text-white/95 font-medium"
                       >
                         {tag}
                       </span>
@@ -2911,55 +3006,64 @@ export default function Home() {
               </div>
 
               {/* Right 60% Editorial Clinical Breakdown Panel */}
-              <div className="relative flex flex-col justify-between w-full md:w-[60%] md:max-h-[93vh] md:overflow-y-auto bg-[#EFEBE2] px-6 py-7 sm:px-10 sm:py-9 md:px-11 md:py-10">
-                {/* Top-Right Close Button (Minimal X) */}
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  aria-label="Close modal"
-                  className="absolute top-6 right-6 sm:top-7 sm:right-7 inline-flex h-8 w-8 items-center justify-center text-[#5A534A] hover:text-[#1C1917] transition-colors cursor-pointer"
-                >
-                  <CloseIcon className="h-4 w-4" />
-                </button>
+              <div className="relative flex flex-col justify-between w-full md:w-[60%] md:max-h-[92vh] md:overflow-y-auto bg-[#F2EFE9] p-4 sm:px-8 sm:py-8 lg:px-10 lg:py-9">
+                {/* Top Bar with Context Pill and Close Button */}
+                <div className="flex items-center justify-between pb-3 border-b border-[#DCD6CC] mb-5">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E4DFD5] text-[10px] font-semibold tracking-wider uppercase text-[#4A453E]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FC5E2F]" />
+                      Targeting: {activeConcern.title}
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={closeModal}
+                    aria-label="Close modal"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full hover:bg-[#E4DFD5] text-[#5A534A] hover:text-[#1C1917] transition-colors cursor-pointer"
+                  >
+                    <CloseIcon className="h-4 w-4" />
+                  </button>
+                </div>
 
                 <div>
                   {/* 1. TREATMENT OVERVIEW & SCIENCE */}
-                  <p className="uppercase text-[#5C564E] font-medium text-[10px] tracking-[0.16em]">
+                  <p className="uppercase text-[#7A736A] font-medium text-[10px] tracking-[0.16em]">
                     TREATMENT OVERVIEW &amp; SCIENCE
                   </p>
 
-                  <h2 className="font-editorial text-[#1C1917] font-normal text-2xl sm:text-[32px] leading-[1.18] tracking-[-0.015em] mt-2.5 pr-6">
+                  <h2 className="font-editorial text-[#1C1917] font-normal text-xl sm:text-[28px] lg:text-[32px] leading-[1.18] tracking-[-0.015em] mt-2 pr-2">
                     {activeTreatment.headline}
                   </h2>
 
-                  <p className="text-[#4E4942] text-xs sm:text-[13px] leading-[1.68] mt-3.5">
+                  <p className="text-[#4E4942] text-xs sm:text-[13px] leading-[1.68] mt-3">
                     {activeTreatment.description}
                   </p>
 
-                  {/* 2. KEY CLINICAL BENEFITS (4 Columns with Circular Icons & Vertical Dividers) */}
-                  <div className="mt-7">
-                    <p className="uppercase text-[#5C564E] font-medium text-[10px] tracking-[0.16em]">
+                  {/* 2. KEY CLINICAL BENEFITS */}
+                  <div className="mt-6 sm:mt-7">
+                    <p className="uppercase text-[#7A736A] font-medium text-[10px] tracking-[0.16em]">
                       KEY CLINICAL BENEFITS
                     </p>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-5 mt-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-0 mt-3.5">
                       {activeTreatment.keyBenefits.map((benefit, idx) => (
                         <div
                           key={benefit.text}
                           className={`flex flex-col ${
                             idx < activeTreatment.keyBenefits.length - 1
-                              ? "sm:border-r sm:border-[#DCD6CC]"
+                              ? "sm:border-r sm:border-[#DDD6C8]"
                               : ""
                           } ${idx > 0 ? "sm:pl-4" : ""} ${
                             idx < activeTreatment.keyBenefits.length - 1
-                              ? "sm:pr-3"
+                              ? "sm:pr-3.5"
                               : ""
                           }`}
                         >
-                          <div className="w-9 h-9 rounded-full border border-[#D8D2C7] bg-[#E7E2D8]/60 flex items-center justify-center text-[#3B3630]">
+                          <div className="w-10 h-10 rounded-full border border-[#DDD6C8] bg-transparent flex items-center justify-center text-[#2C2520] mb-3">
                             <BenefitIcon type={benefit.icon} />
                           </div>
-                          <p className="text-[#3B3630] text-xs sm:text-[12px] leading-[1.42] mt-2.5">
+                          <p className="text-[#2C2520] text-xs sm:text-[12.5px] leading-[1.4] font-normal">
                             {benefit.text}
                           </p>
                         </div>
@@ -2967,13 +3071,13 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* 3. WHAT TO EXPECT IN CLINIC (3 Columns with Vertical Dividers) */}
-                  <div className="mt-7">
-                    <p className="uppercase text-[#5C564E] font-medium text-[10px] tracking-[0.16em]">
+                  {/* 3. WHAT TO EXPECT IN CLINIC */}
+                  <div className="mt-6 sm:mt-7">
+                    <p className="uppercase text-[#7A736A] font-medium text-[10px] tracking-[0.16em]">
                       WHAT TO EXPECT IN CLINIC
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 mt-3.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 mt-3">
                       {activeTreatment.steps.map((s, idx) => (
                         <div
                           key={s.step}
@@ -2981,19 +3085,19 @@ export default function Home() {
                             idx < activeTreatment.steps.length - 1
                               ? "sm:border-r sm:border-[#DCD6CC]"
                               : ""
-                          } ${idx > 0 ? "sm:pl-5" : ""} ${
+                          } ${idx > 0 ? "sm:pl-4" : ""} ${
                             idx < activeTreatment.steps.length - 1
-                              ? "sm:pr-4"
+                              ? "sm:pr-3"
                               : ""
                           }`}
                         >
-                          <span className="text-[#5C564E] text-[11px] font-medium">
+                          <span className="text-[#7A736A] text-[11px] font-semibold">
                             {s.step}
                           </span>
-                          <h4 className="font-editorial text-[#1C1917] font-normal text-[15px] leading-[1.28] mt-1">
+                          <h4 className="font-editorial text-[#1C1917] font-normal text-sm sm:text-[15px] leading-[1.25] mt-1">
                             {s.title}
                           </h4>
-                          <p className="text-[#655F57] text-[11.5px] leading-[1.55] mt-2">
+                          <p className="text-[#655F57] text-[11px] sm:text-[11.5px] leading-[1.55] mt-1.5">
                             {s.detail}
                           </p>
                         </div>
@@ -3003,8 +3107,8 @@ export default function Home() {
                 </div>
 
                 {/* 4. BOTTOM SPECS & CTA FOOTER BAR */}
-                <div className="mt-7 pt-5 border-t border-[#DCD6CC] flex flex-col lg:flex-row lg:items-center justify-between gap-5">
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 flex-1">
+                <div className="mt-6 pt-5 border-t border-[#DCD6CC] flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-3 flex-1">
                     {/* Duration */}
                     <div className="sm:border-r sm:border-[#DCD6CC] sm:pr-3">
                       <p className="uppercase text-[#7A736A] text-[9px] tracking-[0.13em] font-medium">
@@ -3050,17 +3154,17 @@ export default function Home() {
                       <p className="uppercase text-[#7A736A] text-[9px] tracking-[0.13em] font-medium">
                         INVESTMENT
                       </p>
-                      <p className="font-editorial text-[#1C1917] text-[13.5px] leading-snug mt-1">
+                      <p className="font-editorial text-[#1C1917] text-[13.5px] leading-snug mt-1 font-semibold text-[#FC5E2F]">
                         {activeTreatment.specs.price}
                       </p>
                     </div>
                   </div>
 
-                  {/* Dark Espresso "Book an Appointment ->" Pill Button */}
+                  {/* Book an Appointment CTA */}
                   <a
                     href="#book"
                     onClick={closeModal}
-                    className="inline-flex items-center justify-center rounded-full bg-[#2C2520] hover:bg-[#1C1917] text-white text-xs px-5 py-3 gap-2.5 shrink-0 transition-colors"
+                    className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[#1C1917] hover:bg-[#FC5E2F] text-white text-xs px-6 py-3.5 gap-2.5 shrink-0 transition-colors shadow-xs"
                   >
                     <span className="font-editorial tracking-[-0.01em] text-[13px]">
                       Book an Appointment

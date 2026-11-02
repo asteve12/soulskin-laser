@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -16,6 +16,13 @@ const editorialSerif = localFont({
   variable: "--font-editorial-serif",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#F1EEE9",
+};
 
 export const metadata: Metadata = {
   title: "Soul Skin & Laser | Medical-Grade Skin & Laser Treatments",
