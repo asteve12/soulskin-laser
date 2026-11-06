@@ -1217,7 +1217,7 @@ export default function Home() {
             <img
               src="/images/logo-dark.png"
               alt="Aura Skin & Laser"
-              className="h-8 sm:h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
+              className="h-9 sm:h-10 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>
 
@@ -1283,13 +1283,13 @@ export default function Home() {
           {/* Desktop Center: Official Brand Logo */}
           <a
             href="#home"
-            className="hidden md:flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2 h-full py-1.5 group"
+            className="hidden md:flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2 h-full py-1 group"
             aria-label="Aura Skin & Laser Home"
           >
             <img
               src="/images/logo-dark.png"
               alt="Aura Skin & Laser"
-              className="h-10 sm:h-[calc(22*var(--u))] max-h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
+              className="h-11 sm:h-[calc(26*var(--u))] max-h-14 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>
 
@@ -1461,38 +1461,52 @@ export default function Home() {
       {/* ================= HERO SECTION (90% WIDTH + ROUNDED CORNERS) ================= */}
       <section
         id="home"
-        data-reveal="scale"
+        onMouseMove={handlePointerParallax}
+        onMouseLeave={resetPointerParallax}
         className="relative w-[90%] mx-auto mt-4 sm:mt-[calc(9*var(--u))] rounded-[20px] sm:rounded-[calc(14*var(--u))] overflow-hidden bg-[#584D3B] sm:h-[calc(305*var(--u))] min-h-[460px] sm:min-h-0 flex items-end sm:items-center"
       >
-        {/* Background Portrait Image (Responsive: tailored vertical 3:4 portrait for mobile, landscape for desktop) */}
-        <picture className="absolute inset-0 h-full w-full select-none pointer-events-none">
-          <source media="(max-width: 767px)" srcSet="/images/hero-mobile.jpg" />
-          <img
-            src="/images/hero.jpg"
-            alt="Radiant glowing skin portrait"
-            className="h-full w-full object-cover object-[center_20%] sm:object-center"
-          />
-        </picture>
+        {/* Background Portrait Image with Boutique Skincare Face Reveal */}
+        <div className="hero-face-container absolute inset-0 select-none pointer-events-none">
+          <div className="hero-face-breathe absolute inset-0">
+            <picture className="absolute inset-0 h-full w-full">
+              <source media="(max-width: 767px)" srcSet="/images/hero-mobile.jpg" />
+              <img
+                src="/images/hero.jpg"
+                alt="Radiant glowing skin portrait"
+                className="hero-face-image h-full w-full object-cover object-[center_20%] sm:object-center"
+              />
+            </picture>
+          </div>
+        </div>
 
         {/* Dynamic contrast gradient: vertical bottom-to-top on mobile to preserve face visibility, horizontal on desktop */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent md:bg-gradient-to-r md:from-black/40 md:via-black/20 md:to-transparent" />
 
+        {/* Radiant dewy glow sweep across the face (skincare clinic signature) */}
+        <div aria-hidden="true" className="hero-face-radiance" />
+
         {/* Hero Left Content */}
         <div className="relative z-10 px-6 py-8 sm:p-0 sm:pl-[calc(37*var(--u))] max-w-xl sm:max-w-none">
           {/* Eyebrow */}
-          <p className="hero-animate-eyebrow uppercase text-white/80 font-medium text-[10px] sm:text-[calc(5.5*var(--u))] tracking-[0.135em] leading-none">
+          <p className="hero-eyebrow-reveal uppercase text-white/80 font-medium text-[10px] sm:text-[calc(5.5*var(--u))] tracking-[0.135em] leading-none">
             MEDICAL-GRADE SKIN &amp; LASER TREATMENTS
           </p>
 
-          {/* Main Display Heading */}
-          <h1 className="hero-animate-heading font-editorial text-white font-light text-3xl xs:text-4xl sm:text-[calc(38*var(--u))] leading-[1.05] sm:leading-[calc(39*var(--u))] tracking-[-0.015em] mt-3 sm:mt-[calc(12*var(--u))]">
-            <span className="block">Your skin,</span>
-            <span className="block">understood &mdash;</span>
-            <span className="block italic font-normal">then transformed</span>
+          {/* Main Display Heading with Masked Line-by-Line Rise */}
+          <h1 className="font-editorial text-white font-light text-3xl xs:text-4xl sm:text-[calc(38*var(--u))] leading-[1.05] sm:leading-[calc(39*var(--u))] tracking-[-0.015em] mt-3 sm:mt-[calc(12*var(--u))]">
+            <span className="block overflow-hidden pb-0.5">
+              <span className="hero-line-1">Your skin,</span>
+            </span>
+            <span className="block overflow-hidden pb-0.5">
+              <span className="hero-line-2">understood &mdash;</span>
+            </span>
+            <span className="block overflow-hidden pb-0.5">
+              <span className="hero-line-3 italic font-normal">then transformed</span>
+            </span>
           </h1>
 
           {/* Subtitle Paragraph */}
-          <p className="hero-animate-subtitle text-white/85 font-normal text-sm sm:text-[calc(7.2*var(--u))] leading-relaxed sm:leading-[calc(12.2*var(--u))] mt-4 sm:mt-[calc(13*var(--u))] tracking-[0.005em]">
+          <p className="hero-sub-reveal text-white/85 font-normal text-sm sm:text-[calc(7.2*var(--u))] leading-relaxed sm:leading-[calc(12.2*var(--u))] mt-4 sm:mt-[calc(13*var(--u))] tracking-[0.005em]">
             Advanced, science-backed treatments designed
             <br />
             to reveal your healthiest, most radiant skin &mdash;
@@ -1501,10 +1515,10 @@ export default function Home() {
           </p>
 
           {/* Hero CTAs */}
-          <div className="hero-animate-cta flex flex-wrap items-center gap-4 sm:gap-[calc(18.5*var(--u))] mt-6 sm:mt-[calc(17*var(--u))]">
+          <div className="hero-cta-reveal flex flex-wrap items-center gap-4 sm:gap-[calc(18.5*var(--u))] mt-6 sm:mt-[calc(17*var(--u))]">
             <a
               href="#book"
-              className="inline-flex items-center justify-center rounded-full bg-[#FC5E2F] text-white font-medium transition-transform hover:scale-[1.01] hover:bg-[#E54E20] px-5 py-2.5 text-xs sm:w-[calc(131*var(--u))] sm:h-[calc(27.5*var(--u))] sm:px-0 sm:py-0 sm:text-[calc(6.6*var(--u))] gap-2 sm:gap-[calc(6*var(--u))] shadow-sm"
+              className="inline-flex items-center justify-center rounded-full bg-[#FC5E2F] text-white font-medium transition-all duration-300 hover:scale-[1.02] hover:bg-[#E54E20] hover:shadow-[0_8px_24px_-6px_rgba(252,94,47,0.5)] px-5 py-2.5 text-xs sm:w-[calc(131*var(--u))] sm:h-[calc(27.5*var(--u))] sm:px-0 sm:py-0 sm:text-[calc(6.6*var(--u))] gap-2 sm:gap-[calc(6*var(--u))] shadow-sm"
             >
               <span>Book an Appointment</span>
               <ArrowRight className="w-3 h-2.5 sm:w-[calc(8.5*var(--u))] sm:h-[calc(6.5*var(--u))]" />
@@ -1910,29 +1924,11 @@ export default function Home() {
               OUR APPROACH
             </p>
 
-            {/* Heading Row with Orange Asterisk Icon on Right */}
-            <div className="flex items-start justify-between gap-4">
-              <h2 className="font-editorial text-[#1C1917] font-normal text-4xl sm:text-[calc(28*var(--u))] leading-[1.08] tracking-[-0.02em]">
-                <span className="block">What happens when</span>
-                <span className="block">you choose Aura Skin?</span>
-              </h2>
-
-              {/* Warm Orange Asterisk / Spark Icon (*) */}
-              <svg
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                className="w-4 h-4 sm:w-[calc(11*var(--u))] sm:h-[calc(11*var(--u))] text-[#FC5E2F] shrink-0 mt-1 sm:mt-[calc(2*var(--u))]"
-              >
-                <path
-                  d="M10 2V18M2 10H18M4.34 4.34L15.66 15.66M15.66 4.34L4.34 15.66"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
+            {/* Heading */}
+            <h2 className="font-editorial text-[#1C1917] font-normal text-4xl sm:text-[calc(28*var(--u))] leading-[1.08] tracking-[-0.02em]">
+              <span className="block">What happens when</span>
+              <span className="block">you choose Aura Skin?</span>
+            </h2>
 
             {/* Description Paragraph */}
             <p className="text-[#6E6860] font-normal text-xs sm:text-[calc(6.6*var(--u))] leading-[1.68] mt-5 sm:mt-[calc(14*var(--u))] max-w-md sm:max-w-[calc(198*var(--u))]">
@@ -1942,28 +1938,16 @@ export default function Home() {
               results.
             </p>
 
-            {/* Elbow Arrow + Bold CTA Link */}
-            <a
-              href="#book"
-              className="group inline-flex items-center gap-2 sm:gap-[calc(5*var(--u))] mt-6 sm:mt-[calc(18*var(--u))] text-[#1C1917] hover:text-[#FC5E2F] font-semibold text-xs sm:text-[calc(6.3*var(--u))] transition-colors"
-            >
-              <svg
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                className="w-3.5 h-3.5 sm:w-[calc(7.5*var(--u))] sm:h-[calc(7.5*var(--u))] text-[#FC5E2F] transition-transform duration-300 group-hover:translate-x-0.5"
+            {/* Book a consultation Pill Button */}
+            <div className="mt-6 sm:mt-[calc(18*var(--u))]">
+              <a
+                href="#book"
+                className="inline-flex items-center justify-center rounded-full bg-[#1C1917] hover:bg-[#FC5E2F] text-white font-medium text-xs sm:text-[calc(6.4*var(--u))] px-5 py-2.5 sm:px-[calc(14*var(--u))] sm:py-[calc(5.5*var(--u))] gap-2.5 sm:gap-[calc(5*var(--u))] shadow-xs transition-all duration-300 hover:scale-[1.02] cursor-pointer group"
               >
-                <path
-                  d="M3 2.5V8.5H11M11 8.5L8.2 5.7M11 8.5L8.2 11.3"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span>Book a consultation</span>
-            </a>
+                <span>Book a consultation</span>
+                <ArrowRight className="w-3 h-2.5 sm:w-[calc(7*var(--u))] sm:h-[calc(5*var(--u))] transition-transform duration-300 group-hover:translate-x-0.5" />
+              </a>
+            </div>
           </div>
 
           {/* RIGHT COLUMN: 01 - 04 Stacked Process Rows with Top Divider & Top-Right Corner Bracket */}
@@ -2599,7 +2583,7 @@ export default function Home() {
                 <img
                   src="/images/logo-white.png"
                   alt="Aura Skin & Laser"
-                  className="h-9 sm:h-[calc(19*var(--u))] w-auto object-contain transition-opacity group-hover:opacity-85"
+                  className="h-10 sm:h-[calc(23*var(--u))] w-auto object-contain transition-opacity group-hover:opacity-85"
                 />
               </a>
 

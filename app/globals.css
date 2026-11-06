@@ -49,12 +49,142 @@ body {
   }
 }
 
-/* ================= HERO PAGE-LOAD ENTRANCE ANIMATION ================= */
-@keyframes heroTextReveal {
+/* ================= HERO BOUTIQUE SKINCARE FACE REVEAL & TEXT ANIMATION ================= */
+/* 1. Portrait Skin Clarity / Face Reveal */
+@keyframes heroFaceReveal {
+  0% {
+    filter: blur(14px) brightness(1.12) saturate(0.85);
+    transform: scale(1.09);
+    opacity: 0.85;
+  }
+  100% {
+    filter: blur(0px) brightness(1) saturate(1);
+    transform: scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes heroSkinBreathe {
+  0%, 100% {
+    transform: scale(1.02);
+  }
+  50% {
+    transform: scale(1.045) translate(-0.4%, -0.3%);
+  }
+}
+
+.hero-face-container {
+  transform: translate3d(
+    calc(var(--mx, 0) * -16px),
+    calc(var(--my, 0) * -10px),
+    0
+  );
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.hero-face-image {
+  animation: heroFaceReveal 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  will-change: filter, transform, opacity;
+}
+
+.hero-face-breathe {
+  animation: heroSkinBreathe 16s ease-in-out 2.4s infinite;
+}
+
+/* Radiant dewy glow sweep across the face (skincare clinic signature) */
+@keyframes heroFaceRadianceSweep {
+  0% {
+    transform: translateX(-100%) skewX(-14deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  60% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(180%) skewX(-14deg);
+    opacity: 0;
+  }
+}
+
+.hero-face-radiance {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 235, 215, 0.0) 25%,
+    rgba(255, 235, 215, 0.28) 45%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 225, 200, 0.25) 55%,
+    transparent 75%
+  );
+  mix-blend-mode: soft-light;
+  animation: heroFaceRadianceSweep 2.2s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+/* 2. Text Reveal: Eyebrow + Masked Heading Lines + Subtitle + CTAs */
+@keyframes heroEyebrowIn {
   0% {
     opacity: 0;
-    transform: translateY(26px);
-    filter: blur(6px);
+    transform: translateY(12px);
+    letter-spacing: 0.22em;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.135em;
+    filter: blur(0px);
+  }
+}
+
+.hero-eyebrow-reveal {
+  animation: heroEyebrowIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards;
+  will-change: opacity, transform, letter-spacing, filter;
+}
+
+@keyframes heroLineRise {
+  0% {
+    transform: translateY(115%) rotate(1.6deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.hero-line-1 {
+  display: block;
+  transform-origin: left bottom;
+  animation: heroLineRise 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.28s backwards;
+  will-change: transform, opacity;
+}
+
+.hero-line-2 {
+  display: block;
+  transform-origin: left bottom;
+  animation: heroLineRise 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.44s backwards;
+  will-change: transform, opacity;
+}
+
+.hero-line-3 {
+  display: block;
+  transform-origin: left bottom;
+  animation: heroLineRise 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.60s backwards;
+  will-change: transform, opacity;
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(4px);
   }
   100% {
     opacity: 1;
@@ -63,23 +193,13 @@ body {
   }
 }
 
-.hero-animate-eyebrow {
-  animation: heroTextReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s backwards;
+.hero-sub-reveal {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.82s backwards;
   will-change: opacity, transform, filter;
 }
 
-.hero-animate-heading {
-  animation: heroTextReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.28s backwards;
-  will-change: opacity, transform, filter;
-}
-
-.hero-animate-subtitle {
-  animation: heroTextReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.44s backwards;
-  will-change: opacity, transform, filter;
-}
-
-.hero-animate-cta {
-  animation: heroTextReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.6s backwards;
+.hero-cta-reveal {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.02s backwards;
   will-change: opacity, transform, filter;
 }
 
@@ -252,14 +372,20 @@ body {
     filter: none !important;
     transition: none !important;
   }
-  .hero-animate-eyebrow,
-  .hero-animate-heading,
-  .hero-animate-subtitle,
-  .hero-animate-cta,
+  .hero-face-image,
+  .hero-face-breathe,
+  .hero-face-radiance,
+  .hero-eyebrow-reveal,
+  .hero-line-1,
+  .hero-line-2,
+  .hero-line-3,
+  .hero-sub-reveal,
+  .hero-cta-reveal,
   .slider-handle-pulse,
   .img-swap-in {
     animation: none !important;
   }
+  .hero-face-container,
   .tilt-card,
   .parallax-img,
   .membership-img-left,
