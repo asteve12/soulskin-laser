@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Soul Skin & Laser | Medical-Grade Skin & Laser Treatments",
+  title: "Aura Skin & Laser | Medical-Grade Skin & Laser Treatments",
   description:
     "Advanced, science-backed treatments designed to reveal your healthiest, most radiant skin — with genuine care and expert guidance.",
 };

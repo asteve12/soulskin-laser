@@ -1,7 +1,12 @@
 {
-  "name": "my-app",
+  "name": "aura-skin-laser",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "asteve",
+    "email": "deleade12@gmail.com",
+    "url": "https://github.com/asteve"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

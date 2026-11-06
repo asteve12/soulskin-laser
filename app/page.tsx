@@ -218,7 +218,7 @@ const CLIENT_REVIEWS: ClientReview[] = [
     sideImage: "/images/detail-ipl.jpg",
     treatmentId: "led-light-therapy",
     quote:
-      "Coming to Soul Skin completely changed how I care for my reactive skin. Pairing barrier rehabilitation with medical-grade LED calmed my flushing and gave me lasting confidence.",
+      "Coming to Aura Skin completely changed how I care for my reactive skin. Pairing barrier rehabilitation with medical-grade LED calmed my flushing and gave me lasting confidence.",
   },
 ];
 
@@ -1212,11 +1212,11 @@ export default function Home() {
             href="#home"
             onClick={() => setMobileMenuOpen(false)}
             className="md:hidden flex items-center py-1 group"
-            aria-label="Soul Skin & Laser Home"
+            aria-label="Aura Skin & Laser Home"
           >
             <img
               src="/images/logo-dark.png"
-              alt="Soul Skin & Laser"
+              alt="Aura Skin & Laser"
               className="h-8 sm:h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>
@@ -1284,11 +1284,11 @@ export default function Home() {
           <a
             href="#home"
             className="hidden md:flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2 h-full py-1.5 group"
-            aria-label="Soul Skin & Laser Home"
+            aria-label="Aura Skin & Laser Home"
           >
             <img
               src="/images/logo-dark.png"
-              alt="Soul Skin & Laser"
+              alt="Aura Skin & Laser"
               className="h-10 sm:h-[calc(22*var(--u))] max-h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>
@@ -1432,11 +1432,11 @@ export default function Home() {
 
             <div className="pt-4 mt-4 border-t border-[#DFDBD2] flex flex-col gap-3">
               <a
-                href="tel:0406541628"
+                href="tel:0738521100"
                 className="text-xs text-[#6E6860] flex items-center justify-between"
               >
                 <span>Direct Line:</span>
-                <strong className="text-[#1C1917] font-semibold">0406 541 628</strong>
+                <strong className="text-[#1C1917] font-semibold">(07) 3852 1100</strong>
               </a>
               <a
                 href="#book"
@@ -1914,7 +1914,7 @@ export default function Home() {
             <div className="flex items-start justify-between gap-4">
               <h2 className="font-editorial text-[#1C1917] font-normal text-4xl sm:text-[calc(28*var(--u))] leading-[1.08] tracking-[-0.02em]">
                 <span className="block">What happens when</span>
-                <span className="block">you choose Soul Skin?</span>
+                <span className="block">you choose Aura Skin?</span>
               </h2>
 
               {/* Warm Orange Asterisk / Spark Icon (*) */}
@@ -2014,13 +2014,13 @@ export default function Home() {
         id="reviews"
         className="w-full bg-[#E7E1D7] px-5 py-14 sm:px-[calc(35*var(--u))] sm:py-[calc(38*var(--u))]"
       >
-        {/* Top Centered Section Heading & Subtitle (Tailored to Soul Skin & Laser) */}
+        {/* Top Centered Section Heading & Subtitle (Tailored to Aura Skin & Laser) */}
         <div data-reveal="up" className="text-center max-w-xl mx-auto">
           <p className="uppercase text-[#7A736B] font-medium text-[10px] sm:text-[calc(5.5*var(--u))] tracking-[0.14em] leading-none mb-2.5 sm:mb-[calc(8*var(--u))]">
             CLIENT STORIES &amp; CLINICAL REVIEWS
           </p>
           <h2 className="font-editorial text-[#1C1917] font-normal text-3xl sm:text-[calc(25*var(--u))] leading-[1.12] tracking-[-0.02em]">
-            Why clients choose Soul Skin &amp; Laser
+            Why clients choose Aura Skin &amp; Laser
           </h2>
           <p className="text-[#6E6860] font-normal text-xs sm:text-[calc(6.6*var(--u))] leading-[1.6] mt-2.5 sm:mt-[calc(7.5*var(--u))]">
             Real reflections from Brisbane clients who transformed their skin
@@ -2167,7 +2167,7 @@ export default function Home() {
               <div className="flex items-center gap-3.5 sm:gap-[calc(9.5*var(--u))]">
                 <img
                   src="/images/approach-1.jpg"
-                  alt="Soul Skin & Laser 1-on-1 clinical consultation"
+                  alt="Aura Skin & Laser 1-on-1 clinical consultation"
                   className="w-16 h-12 sm:w-[calc(52*var(--u))] sm:h-[calc(38*var(--u))] rounded-[5px] object-cover object-center shrink-0 border border-[#D8CFC3] transition-transform duration-500 hover:scale-110 hover:-rotate-2"
                 />
 
@@ -2322,7 +2322,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SECTION 7: SOUL SKIN MEMBERSHIP ================= */}
+      {/* ================= SECTION 7: AURA SKIN MEMBERSHIP ================= */}
       <section
         id="membership"
         data-parallax="0.12"
@@ -2375,7 +2375,7 @@ export default function Home() {
 
           {/* Editorial Serif Display Heading matching remaining section headings */}
           <h2 className="font-editorial text-center select-none drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] text-3xl sm:text-[calc(25*var(--u))] leading-[1.12] sm:leading-[calc(27.8*var(--u))] tracking-[-0.015em]">
-            <span className="italic font-normal text-[#FC5E2F]">Soul Skin </span>
+            <span className="italic font-normal text-[#FC5E2F]">Aura Skin </span>
             <span className="font-normal text-[#F1EEE9]">Membership.</span>
           </h2>
 
@@ -2594,11 +2594,11 @@ export default function Home() {
               <a
                 href="#home"
                 className="flex items-center group"
-                aria-label="Soul Skin & Laser Home"
+                aria-label="Aura Skin & Laser Home"
               >
                 <img
                   src="/images/logo-white.png"
-                  alt="Soul Skin & Laser"
+                  alt="Aura Skin & Laser"
                   className="h-9 sm:h-[calc(19*var(--u))] w-auto object-contain transition-opacity group-hover:opacity-85"
                 />
               </a>
@@ -2633,7 +2633,7 @@ export default function Home() {
 
             {/* Bottom Row: Copyright */}
             <p className="text-white/55 text-[11px] sm:text-[calc(5.3*var(--u))] pt-4 sm:pt-[calc(11*var(--u))]">
-              &copy; 2025 Soul Skin &amp; Laser. All rights reserved.
+              &copy; 2025 Aura Skin &amp; Laser. All rights reserved.
             </p>
           </div>
 
@@ -2642,7 +2642,7 @@ export default function Home() {
             {/* Contact Info List (Phone, Email, Location) */}
             <div className="flex flex-col justify-between gap-2.5 sm:gap-[calc(6*var(--u))] text-xs sm:text-[calc(5.8*var(--u))] text-white/85">
               <a
-                href="tel:0406541628"
+                href="tel:0738521100"
                 className="inline-flex items-center gap-2.5 sm:gap-[calc(7*var(--u))] hover:text-white transition-colors"
               >
                 <svg
@@ -2653,11 +2653,11 @@ export default function Home() {
                 >
                   <path d="M3.1 1.8C3.5 1.8 3.9 2.1 4.1 2.5L4.8 4.2C4.9 4.5 4.8 4.9 4.6 5.2L3.6 6.1C4.3 7.5 5.5 8.7 6.9 9.4L7.8 8.4C8.1 8.2 8.5 8.1 8.8 8.2L10.5 8.9C10.9 9.1 11.2 9.5 11.2 9.9V11.3C11.2 11.8 10.8 12.2 10.3 12.2C5.6 12.2 1.8 8.4 1.8 3.7C1.8 3.2 2.2 1.8 3.1 1.8Z" />
                 </svg>
-                <span>0406 541 628</span>
+                <span>(07) 3852 1100</span>
               </a>
 
               <a
-                href="mailto:hello@soulskinandlaser.com"
+                href="mailto:hello@auraskinandlaser.com"
                 className="inline-flex items-center gap-2.5 sm:gap-[calc(7*var(--u))] hover:text-white transition-colors"
               >
                 <svg
@@ -2671,7 +2671,7 @@ export default function Home() {
                   <rect x="1.5" y="3" width="11" height="8" rx="1.2" />
                   <path d="M2 3.8L7 7.4L12 3.8" />
                 </svg>
-                <span>hello@soulskinandlaser.com</span>
+                <span>hello@auraskinandlaser.com</span>
               </a>
 
               <div className="inline-flex items-center gap-2.5 sm:gap-[calc(7*var(--u))]">
